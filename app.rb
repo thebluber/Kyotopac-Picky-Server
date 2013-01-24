@@ -9,7 +9,7 @@ class ZenodotosSearch < Sinatra::Base
 
   #extend Picky::Sinatra::IndexActions
 
-  post '/' do
+  put '/' do
     index_name = params['index']
     index = Picky::Indexes[index_name.to_sym]
     data = params['data']
